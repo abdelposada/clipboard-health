@@ -9,3 +9,9 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+- I checked and if there's no event, by default is assigning the `TRIVIAL_PARTITION_KEY` value, so I validated this from the start and returned the value right there.
+- I removed unnecessary nested if statements and used a newest JS features (optional chaining and or logical OR operator) also removed the declaration of data since is only being used here and passed directly.
+- I also renamed to `partitionKey` the `candidate` variable because I think this way is more readable.
+
+Since I didn't have real examples of inputs for the testing, I just entered some random/1hash values but I checked different inputs with the previous version and the were doing the same, also I don't really know which other cases can be validated because of the `TRIVIAL_PARTITION_KEY`.
